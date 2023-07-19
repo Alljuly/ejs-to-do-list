@@ -1,0 +1,151 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@1,300&family=VT323&display=swap");
+
+html,
+body {
+  background-color: #133f6f;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: space-between;
+  font-family: "VT323";
+  background-image: url("/images/pngwing.com.png");
+  background-repeat: no-repeat;
+}
+
+header {
+  justify-items: left;
+  width: 100%;
+  top: 0;
+  left: 0;
+  margin-bottom: 1rem;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: max-content;
+  bottom: 0;
+  left: 0;
+  margin-top: 1rem;
+}
+
+header,
+footer {
+  position: fixed;
+
+  background-color: #06274b;
+  display: flex;
+  color: white;
+  padding: 0.5rem 0;
+  width: 100%;
+}
+
+.nyanCat {
+  margin: 1rem;
+  max-height: 200px;
+  min-width: 100%;
+}
+
+img {
+  align-self: center;
+  margin-inline: 1.5rem;
+}
+
+p {
+  font-size: 2rem;
+  margin: 0;
+}
+
+.formSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  max-width: 400px;
+  margin: 5rem 0;
+}
+
+/*#e48ea7
+#6f44f1*/
+.dataHeader {
+  width: max-content;
+  background-color: #6f44f1;
+  color: white;
+  border-radius: 8px;
+  font-size: 1.5rem;
+  padding: 0.5rem;
+  text-transform: capitalize;
+
+  align-items: center;
+  margin: 1.5rem 0;
+}
+h1 {
+  margin: 0;
+  text-align: center;
+  width: max-content;
+  text-shadow: -1px -1px 0px #000000, -1px 1px 0px #000000, 1px -1px 0px #000000,
+    1px 0px 0px #000000;
+}
+
+.item {
+  display: flex;
+  flex-direction: row;
+  padding: 1.2rem 0;
+  margin: 0.3rem;
+  max-width: 350px;
+  width: 100%;
+  border-bottom: solid 1px rgba(0, 0, 0, 0.075);
+}
+
+div {
+  width: 100%;
+  justify-content: auto;
+  font-size: 18px;
+}
+
+.content {
+  margin: 2rem 0 4rem;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 5px 5px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+input {
+  align-self: flex-start;
+  border: 0;
+  margin-left: 1rem;
+  font-family: "VT323";
+  font-size: 1rem;
+}
+
+form {
+  margin: 1rem;
+}
+input:focus {
+  border: 0;
+  outline: 0;
+}
+.btn {
+  border: 0;
+  height: 4rem;
+  width: 4rem;
+  border-radius: 50%;
+  background-color: #133f6f;
+  color: white;
+  font-size: 1.5rem;
+}
+li {
+  margin: 0 0.5rem;
+  text-align: left;
+  list-style-type: none;
+  max-width: 80%;
+  font-size: 20px;
+}
