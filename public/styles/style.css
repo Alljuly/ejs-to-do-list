@@ -98,8 +98,10 @@ h1 {
 .item {
   display: flex;
   flex-direction: row;
+  justify-content: left;
+  align-items: center;
+  align-content: center;
   padding: 1.2rem 0;
-  margin: 0.3rem;
   max-width: 350px;
   width: 100%;
   border-bottom: solid 1px rgba(0, 0, 0, 0.075);
@@ -112,10 +114,14 @@ div {
 }
 
 .content {
+  display: flex;
+  flex-direction: column;
   margin: 2rem 0 4rem;
   background-color: white;
   border-radius: 12px;
   box-shadow: 5px 5px 2px 1px rgba(0, 0, 0, 0.2);
+  justify-content: center;
+  align-items: center;
 }
 
 input {
