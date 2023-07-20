@@ -76,12 +76,11 @@ p {
 /*#e48ea7
 #6f44f1*/
 .dataHeader {
-  width: max-content;
+  width: 100%;
   background-color: #6f44f1;
   color: white;
   border-radius: 8px;
   font-size: 1.5rem;
-  padding: 0.5rem;
   text-transform: capitalize;
 
   align-items: center;
@@ -89,8 +88,9 @@ p {
 }
 h1 {
   margin: 0;
+  padding: 0.5rem;
   text-align: center;
-  width: max-content;
+  justify-content: center;
   text-shadow: -1px -1px 0px #000000, -1px 1px 0px #000000, 1px -1px 0px #000000,
     1px 0px 0px #000000;
 }
