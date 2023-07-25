@@ -12,6 +12,6 @@
 
 2. Task Viewing: Users should be able to view a list of all their tasks.
 
-3. Tasks Saving and Delete: Tasks are save on a database and can be deleting.
+3. Tasks Save and Delete: Tasks are save on a database and can be deleting.
 
 4. Task Completing: Users should be able to strike through their completed tasks in the todo list.
