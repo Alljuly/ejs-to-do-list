@@ -15,7 +15,6 @@ body {
   justify-content: space-between;
   font-family: "VT323";
   background-image: url("/images/pngwing.com.png");
-  background-repeat: no-repeat;
 }
 
 header {
@@ -71,6 +70,18 @@ p {
   align-items: center;
   max-width: 400px;
   margin: 5rem 0;
+}
+
+.list-field {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  margin: 0;
+  padding: 1rem;
+}
+
+.list-field > input {
+  margin-right: 0.5rem;
 }
 
 /*#e48ea7

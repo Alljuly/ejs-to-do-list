@@ -18,11 +18,19 @@
         <h1><%=day%>, <%=month%> <%=date%></h1>
       </div>
       <div class="content">
-        <% items.forEach(toDo => { %>
+        <% content.forEach(toDo => { %>
 
         <div class="item">
-          <input type="checkbox" class="list" />
-          <li><%= toDo %></li>
+          <form class="list-field" action="/delete" method="post">
+            <input
+              type="checkbox"
+              class="list"
+              name="checkbox"
+              value="<%=toDo._id%>"
+              onChange="this.form.submit()"
+            />
+            <li><%= toDo.name %></li>
+          </form>
         </div>
         <% }); %>
 
