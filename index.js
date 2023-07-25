@@ -14,15 +14,15 @@ const taskSchema = { name: String };
 const Task = mongoose.model("Task", taskSchema);
 
 const task1 = new Task({
-  name: "Welcome to the nyan to do list.",
+  name: " ",
 });
 
 const task2 = new Task({
-  name: "<--- Hit this to delete a item.",
+  name: " ",
 });
 
 const task3 = new Task({
-  name: "Hit the + to add a item.",
+  name: " ",
 });
 
 const defaultTasks = [task1, task2, task3];
@@ -61,21 +61,46 @@ let month = months[d.getMonth()];
 let day = days[d.getDay()];
 
 let i = 0;
-
 function addList(task) {
-  const newTask = new Task({ name: task });
+  if (i <= 2) {
+    if (defaultTasks[i].name == " ") {
+      const newTask = new Task({ name: task });
 
-  defaultTasks.push(task);
-  newTask.save();
-  console.log(defaultTasks);
+      Task.findByIdAndUpdate(defaultTasks[i], {
+        $set: { name: task },
+      }).then(function (err) {
+        if (err) {
+          console.log(err);
+        } else {
+          console.log("update!", defaultTasks[i], "to: ", newTask, ".");
+        }
+      });
+
+      console.log("repetição:", i);
+    } else {
+      const newTask = new Task({ name: task });
+      defaultTasks.push(task);
+      newTask.save();
+      console.log(defaultTasks);
+    }
+    i++;
+  } else {
+    const newTask = new Task({ name: task });
+
+    defaultTasks.push(task);
+    newTask.save();
+    console.log(defaultTasks);
+  }
 }
 
 app.get("/", async (req, res) => {
   await Task.find({}).then(function (findItems) {
     if (findItems.length === 0) {
+      i = 0;
       Task.insertMany(defaultTasks)
         .then(function () {
-          console.log("Data inserted"); // Success
+          console.log("Data inserted");
+          console.log(findItems); // Success
         })
         .catch(function (error) {
           console.log(error); // Failure
