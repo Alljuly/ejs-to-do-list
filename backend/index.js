@@ -1,13 +1,15 @@
 import express from "express";
 import bodyParser from "body-parser";
-import mongoose from "mongoose";
 
-const port = 3000;
+import dotenv from "dotenv";
+
+dotenv.config()
+
 const app = express();
 
 app.set("view engine", "ejs");
 
-mongoose.connect("mongodb://127.0.0.1:27017/tododb");
+
 
 const taskSchema = { name: String };
 
@@ -30,30 +32,7 @@ const defaultTasks = [task1, task2, task3];
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
 
-const months = [
-  "January",
-  "February",
-  "March",
-  "April",
-  "May",
-  "June",
-  "July",
-  "August",
-  "September",
-  "October",
-  "November",
-  "December",
-];
 
-const days = [
-  "Sunday",
-  "Monday",
-  "Tuesday",
-  "Wednesday",
-  "Thursday",
-  "Friday",
-  "Saturday",
-];
 
 const d = new Date();
 let month = months[d.getMonth()];
@@ -139,6 +118,8 @@ app.post("/delete", function (req, res) {
 
   res.redirect("/");
 });
+
+const port = process.env.PORT
 
 app.listen(port, function () {
   console.log("server is running on", +port);
